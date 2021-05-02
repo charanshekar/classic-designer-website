@@ -1,10 +1,17 @@
 $lt-gray: #ddd;
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
+$background-dark: white;
+$background-light: black;
+$background-pale: #CFCFCF;
+
+$navbar-white: #fafafa;
+$navbar-black: #131313;
+$navbar-active-color: #fafafa;
+$navbar-bg-active-color: #EFC88B;
+$bg-light-blue: #00c6ff;
+$bg-dark-blue: #0072ff;
 
 // Height variables
-$carousel-item-height: 300px;
+$carousel-item-height: 280px;
 
 @mixin zero-margin ($pad-up-dn, $pad-left-right) {
 	margin:0px auto;
@@ -43,8 +50,28 @@ body{
     z-index:0;
 }
 
-.navbar-dark {
+.navbar-light {
      background-color: $background-dark;
+}
+
+// Navigation Bar
+.navbar {
+    a {
+      color: $navbar-black;
+    }
+    li {
+      &.active {
+        background: $navbar-bg-active-color;
+        a {
+          color: $navbar-active-color;
+        }
+      }
+    }
+    .navbar-toggle {
+      .icon-bar {
+        background: $navbar-black;
+      }
+    }
 }
 
 .tab-content {
@@ -55,7 +82,7 @@ body{
 }
 
 .carousel {
-    background:$background-dark;
+    background:$background-light;
 
     .carousel-item {
         height: $carousel-item-height;
@@ -63,9 +90,20 @@ body{
             position: absolute;
             top: 0;
             left: 0;
-            min-height: 300px;
+            min-height: 280px;
         }
+        // gave the parent element of (.carousel-caption) - .carousel-item, 
+        // the following CSS to prevent blurry elements when it's placed on half a pixel.
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
     }
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
 }
 
 #carouselButton {
@@ -78,12 +116,102 @@ body{
 .modal {
     .modal-header {
         background: $background-dark;
-        color:floralwhite;
+        color: black;
         button {
-            color: floralwhite;
+            color: black;
         }
     }
     .modal-body {
         background:  $background-pale;
     }
 }
+
+@media only screen and (min-width : 768px) {
+  .carousel {
+    .carousel-item {
+      height: 400px;
+      img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-height: 400px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .carousel {
+    .carousel-item {
+      height: 600px;
+      img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-height: 600px;
+      }
+    }
+  }
+}
+
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+$bg-width: 50px;
+$bg-height: 50px;
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url($bg-url) repeat 0 0;
+  
+  -webkit-animation: bg-scrolling-reverse 1.5s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 1.5s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 1.5s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 1.5s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+}
+
+

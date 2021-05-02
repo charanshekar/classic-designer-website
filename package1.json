@@ -1,0 +1,34 @@
+{
+  "name": "classic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charanshekar/classic-designer-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charanshekar/classic-designer-website/issues"
+  },
+  "homepage": "https://github.com/charanshekar/classic-designer-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.29",
+    "gulp": "^4.0.2",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+
+  }
+}

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
 .row-header {
   margin: 0px auto;
   padding: 0px 0px; }
@@ -9,14 +10,14 @@
   min-height: 400px; }
 
 .footer {
-  background-color: #D1C4E9;
+  background-color: #CFCFCF;
   margin: 0px auto;
   padding: 20px 0px; }
 
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #9575CD;
+  background: black;
   color: floralwhite; }
 
 address {
@@ -28,8 +29,19 @@ body {
   padding: 50px 0px 0px 0px;
   z-index: 0; }
 
-.navbar-dark {
-  background-color: #512DA8; }
+.navbar-light {
+  background-color: white; }
+
+.navbar a {
+  color: #131313; }
+
+.navbar li.active {
+  background: #EFC88B; }
+  .navbar li.active a {
+    color: #fafafa; }
+
+.navbar .navbar-toggle .icon-bar {
+  background: #131313; }
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -38,14 +50,22 @@ body {
   padding: 10px; }
 
 .carousel {
-  background: #512DA8; }
+  background: black; }
   .carousel .carousel-item {
-    height: 300px; }
+    height: 280px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
     .carousel .carousel-item img {
       position: absolute;
       top: 0;
       left: 0;
-      min-height: 300px; }
+      min-height: 280px; }
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial; }
 
 #carouselButton {
   right: 0px;
@@ -54,10 +74,87 @@ body {
   z-index: 1; }
 
 .modal .modal-header {
-  background: #512DA8;
-  color: floralwhite; }
+  background: white;
+  color: black; }
   .modal .modal-header button {
-    color: floralwhite; }
+    color: black; }
 
 .modal .modal-body {
-  background: #D1C4E9; }
+  background: #CFCFCF; }
+
+@media only screen and (min-width: 768px) {
+  .carousel .carousel-item {
+    height: 400px; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 400px; } }
+
+@media only screen and (min-width: 992px) {
+  .carousel .carousel-item {
+    height: 600px; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 600px; } }
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 1.5s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 1.5s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 1.5s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 1.5s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear; }

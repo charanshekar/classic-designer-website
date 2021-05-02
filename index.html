@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- endbuild -->
-    <title>Ristorante Con Fusion</title>
+    <title>Classic Designer</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-light navbar-expand-sm fixed-top border-bottom">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -27,14 +27,11 @@
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto col-12">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info-circle fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-book fa-lg"></span> Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact</a></li>
                 </ul>
-                <span class="navbar-text col-2">
-                    <a id="loginButton"><span class="fa fa-sign-in"></span> Login</a>
-                </span>
             </div>
         </div>
     </nav>
@@ -163,50 +160,72 @@
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    <img src="img/classic.png" class="img-fluid">
+                    <p>With decades of Designing experience, combined with the efforts of our skilled tailors, we create a unique tailor-made experience for everyone, each a classic.</p>
                 </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
-                </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <a id="reserveButton" role="button" class="btn btn-warning btn-block">Reserve Table</a>
+                <div class="offset-sm-3 col-12 col-sm-3 align-self-center">
+                    <img src="img/logo3.png" class="img-fluid" height="300" width="150">
+                    <p class="offset-sm-1"><b>SINCE 1986</b></p>
                 </div>
             </div>
         </div> 
     </header>
 
     <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb d-flex justify-content-center">
+                <li class="breadcrumb-item"><span class="fa fa-home fa-lg"></span></li>
+            </ol>
+        </div>
+
         <div class="row row-content">
             <div class="col">
-                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                <div id="mycarousel" class="carousel slide showCarousel" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                            <img class="d-block w-100 img-fluid" src="img/blazer2.jpeg" alt="Store">
+                            <div class="carousel-caption text-center">
+                                <h2><kbd>Suits & Blazers</kbd> <span class="badge badge-danger">NEW</span></h2>
                                 <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/buffet.png" alt="Buffet">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            <img class="d-block w-100 img-fluid" src="img/sherwani4.png" alt="Store">
+                            <div class="carousel-caption">
+                                <h2><kbd>Sherwanis</kbd> <span class="badge badge-danger">LATEST</span></h2>
+                                <p class="d-none d-md-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/alberto.png" alt="Alberto">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>Alberto Somayya</h2>
-                                <h4>Executive Chef</h4>
-                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            <img class="d-block w-100 img-fluid" src="img/wedding.png" alt="Store">
+                            <div class="carousel-caption">
+                                <h2><kbd>Wedding Collection</kbd></h2>
+                                <h4><b>Make sure you have a Classy Wedding.</b></h4>
+                                <p class="d-none d-md-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 img-fluid" src="img/fabric4.jpeg" alt="Store">
+                            <div class="carousel-caption">
+                                <h2><kbd>Quality Rich Fabrics</kbd></h2>
+                                <h4><b> A wide variety to fit your style.</b></h4>
+                                <p class="d-none d-md-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 img-fluid" src="img/bespoke4.jpeg" alt="Store">
+                            <div class="carousel-caption">
+                                <h2><kbd>Bespoke and Made to Measure</kbd></h2>
+                                <h4><b>Custom made for the Tailored Gentlemen.</b></h4>
+                                <p class="d-none d-md-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                             </div>
                         </div>
                         <ol class="carousel-indicators">
                             <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#mycarousel" data-slide-to="1"></li>
                             <li data-target="#mycarousel" data-slide-to="2"></li>
+                            <li data-target="#mycarousel" data-slide-to="3"></li>
+                            <li data-target="#mycarousel" data-slide-to="4"></li>
                         </ol>
                         <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -214,9 +233,6 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
-                        <button class="btn btn-danger btn-sm" id="carouselButton">
-                            <span class="fa fa-pause"></span>
-                        </button>
                     </div>
                 </div>
              </div>
@@ -225,14 +241,14 @@
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
+                <h3>One of many Branded fabrics available</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/uthappizza.png" alt="Uthappizza">
-                    <div class="media-body">
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    <img class="d-flex ml-3 img-thumbnail align-self-center" src="./img/raymond.png" alt="Raymond" height="75" width="150">
+                    <div class="media-body offset-1">
+                        <h2 class="mt-0"><b>Authorized Raymond Dealer</b> <span class="badge badge-danger">&reg</span></h2>
+                        <p class="d-none d-md-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. </p>    
                     </div>
                 </div>
             </div>
@@ -241,30 +257,29 @@
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
+                <h3>Quality Imported Fabrics</h3>
             </div>
             <div class="col col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>    
+                        <h2 class="mt-0"><b>Quality Imported Fabrics</b> <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-md-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
-                    <img class="d-flex ml-3 img-thumbnail align-self-center" src="./img/buffet.png" alt="Buffet">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center offset-1" src="./img/imported-logo.png" alt="Imported" height="100" width="100">
                 </div>
             </div>
         </div>
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
+                <h3>From the most Experienced Tailors</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/alberto.png" alt="Alberto Somayya">
-                    <div class="media-body">
-                        <h2 class="mt-0">Alberto Somayya</h2>
-                        <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    &emsp;&emsp;&nbsp;<img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/custom-made.png" alt="Custom" height="100" width="100">
+                    <div class="media-body offset-1">
+                        <h2 class="mt-0"><b>Custom Tailor-Made</b></h2>
+                        <p class="d-none d-md-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
             </div>
@@ -279,20 +294,20 @@
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-                      <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                      <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                      <i class="fa fa-envelope fa-lg"></i>: 
-                      <a href="mailto:confusion@food.net">confusion@food.net</a>
+                        #10/1, 1st Floor, Suparna Nilaya,<br>
+                        BVK Iyengar Rd,<br>
+                        Bengaluru, Karnataka-560053<br>
+                        <i class="fa fa-tty"></i>: +080 22203708<br>
+                        <i class="fa fa-phone"></i>: +91 98442 41109 / 83109 60936<br>
+                        <i class="fa fa-envelope"></i>:
+                        <a href="mailto:classicdesigner@gmail.com">classicdesigner@gmail.com</a>
 		           </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
@@ -302,13 +317,14 @@
                         <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
                         <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:classicdesigner@gmail.com"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
            </div>
            <div class="row justify-content-center">             
                 <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    <br>
+                    <p>© Copyright 2021 Classic Designer</p>
                 </div>
            </div>
         </div>

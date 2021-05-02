@@ -1,5 +1,19 @@
 $(document).ready(function() {
-    $('#mycarousel').carousel({ interval: 2000 });
+
+    $( window ).scroll( function () {
+        if ( $(document).scrollTop() > 150 ) {
+          // Navigation Bar
+          $('.navbar').removeClass('fadeIn');
+          $('body').addClass('shrink');
+          $('.navbar').addClass('animated fadeInDown');
+        } else {
+          $('.navbar').removeClass('fadeInDown');
+          $('body').removeClass('shrink');
+          $('.navbar').addClass('animated fadeIn');
+        }
+    });
+
+    $('#mycarousel').carousel({ interval: 3500 });
     $('#carouselButton').click(function() {
        if($('#carouselButton').children('span').hasClass('fa-pause')) {
            $('#mycarousel').carousel('pause');
@@ -19,4 +33,20 @@ $(document).ready(function() {
     $('#reserveButton').click(function() {
        $('#reserveModal').modal('toggle');
     });
+
+ // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.036 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
+  }
 });
