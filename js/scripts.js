@@ -34,6 +34,82 @@ $(document).ready(function() {
        $('#reserveModal').modal('toggle');
     });
 
+    /// OWL CAROUSEL
+
+      $('.owl-carousel').owlCarousel({
+        mouseDrag:false,
+        loop:true,
+        margin:2,
+        nav:true,
+        responsive:{
+          0:{
+          items:1
+          },
+          600:{
+          items:1
+          },
+          1000:{
+          items:3
+          }
+        }
+      });
+
+      function owlPrev(id) {
+        $active = $(id + ' .owl-item .item.show');
+        $(id + ' .owl-item .item.show').removeClass('show');
+        $(id + ' .owl-item .item').removeClass('next');
+        $(id + ' .owl-item .item').removeClass('prev');
+        $active.addClass('next');
+        if($active.is('.first')) {
+          $(id + ' .owl-item .last').addClass('show');
+          $(id + ' .first').addClass('next');
+          $(id + ' .owl-item .last').parent().prev().children('.item').addClass('prev');
+        }
+        else {
+          $active.parent().prev().children('.item').addClass('show');
+          if($active.parent().prev().children('.item').is('.first')) {
+            $(id + ' .owl-item .last').addClass('prev');
+          }
+          else {
+            $(id + ' .owl-item .show').parent().prev().children('.item').addClass('prev');
+          }
+        }
+      }
+
+      function owlNext(id) {
+        $active = $(id + ' .owl-item .item.show');
+        $(id + ' .owl-item .item.show').removeClass('show');
+        $(id + ' .owl-item .item').removeClass('next');
+        $(id + ' .owl-item .item').removeClass('prev');
+        $active.addClass('prev');
+        if($active.is('.last')) {
+          $(id + ' .owl-item .first').addClass('show');
+          $(id + ' .owl-item .first').parent().next().children('.item').addClass('prev');
+        }
+        else {
+          $active.parent().next().children('.item').addClass('show');
+          if($active.parent().next().children('.item').is('.last')) {
+            $(id + ' .owl-item .first').addClass('next');
+          }
+          else {
+            $(id + ' .owl-item .show').parent().next().children('.item').addClass('next');
+          }
+        }
+      }
+
+      $('.owl-prev').click(function() {
+        $ID = $(this).parent().parent().attr('id');
+        $elmID = '#' + $ID;
+        owlPrev($elmID);
+      });
+        
+      $('.owl-next').click(function() {
+        $ID = $(this).parent().parent().attr('id');
+        $elmID = '#' + $ID;
+        owlNext($elmID);
+      });
+      
+
  // Initialize and add the map
   function initMap() {
     // The location of Uluru

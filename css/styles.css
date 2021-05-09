@@ -1,4 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
+.header-set {
+  height: 290px;
+  align-items: center; }
+
+.bold-text {
+  color: #555555;
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 0 0 0;
+  padding: 20px 30px;
+  text-align: center; }
+
+.sub-headings {
+  color: #555555;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 10px;
+  margin: 0 0 0;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 20px 0;
+  grid-gap: 20px; }
+
+h2.sub-headings:after, h2.sub-headings:before {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #EFC88B; }
+
 .row-header {
   margin: 0px auto;
   padding: 0px 0px; }
@@ -27,7 +58,11 @@ address {
 
 body {
   padding: 50px 0px 0px 0px;
-  z-index: 0; }
+  z-index: 0;
+  overflow-x: hidden;
+  height: 100%;
+  background-image: linear-gradient(180deg, #1E88E5, #fff);
+  background-repeat: no-repeat; }
 
 .navbar-light {
   background-color: white; }
@@ -52,7 +87,7 @@ body {
 .carousel {
   background: black; }
   .carousel .carousel-item {
-    height: 280px;
+    height: 400px;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d; }
@@ -158,3 +193,64 @@ body {
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear; }
+
+.cardShow {
+  box-shadow: 0px 4px 8px 0px #BDBDBD;
+  height: 500px; }
+  .cardShow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+    max-height: 500px; }
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  background: 0 0;
+  border: none;
+  padding: 5px 20px !important;
+  font: inherit;
+  font-size: 50px !important; }
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+  color: #0D47A1 !important;
+  background-color: transparent !important; }
+
+.owl-dots {
+  display: none; }
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0; }
+
+.item {
+  display: none; }
+
+.next {
+  display: block !important;
+  position: relative;
+  transform: scale(0.8);
+  transition-duration: 0.3s;
+  opacity: 0.6; }
+
+.prev {
+  display: block !important;
+  position: relative;
+  transform: scale(0.8);
+  transition-duration: 0.3s;
+  opacity: 0.6; }
+
+.item.show {
+  display: block;
+  transition-duration: 0.4s; }
+
+@media screen and (max-width: 999px) {
+  .next,
+  .prev {
+    transform: scale(1);
+    opacity: 1; }
+  .item {
+    display: block !important; } }
