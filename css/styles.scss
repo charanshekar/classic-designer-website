@@ -23,13 +23,23 @@ $carousel-item-height: 400px;
   align-items: center;
 }
 
+.image-text {
+  padding: 1px 8px;
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
+}
+
+.image-text-sub {
+  padding: 0px 0px;
+  color: white;
+  background: #EFC88B; //rgba(180, 70, 70, 0.75);
+}
+
 .bold-text {
   color: rgb(85, 85, 85);
   font-family: "Trebuchet MS", sans-serif;
   margin: 0 0 0;
   padding: 20px 30px;
-
-
   text-align:center;
 }
 
@@ -64,6 +74,12 @@ h2.sub-headings:after,h2.sub-headings:before {
     @include zero-margin(50px,0px);
     border-bottom: 1px ridge;
     min-height:400px;
+}
+
+.backRed {
+  background-color: rgba(238, 211, 161, 0.2); //rgba(241, 172, 172, 0.75);
+  margin: 30px 20px;
+  box-shadow: 0px 1px 2px 0px #BDBDBD;
 }
 
 .footer{

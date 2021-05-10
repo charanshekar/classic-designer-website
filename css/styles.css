@@ -3,6 +3,16 @@
   height: 290px;
   align-items: center; }
 
+.image-text {
+  padding: 1px 8px;
+  background: rgba(255, 255, 255, 0.75);
+  color: black; }
+
+.image-text-sub {
+  padding: 0px 0px;
+  color: white;
+  background: #EFC88B; }
+
 .bold-text {
   color: #555555;
   font-family: "Trebuchet MS", sans-serif;
@@ -39,6 +49,11 @@ h2.sub-headings:after, h2.sub-headings:before {
   padding: 50px 0px;
   border-bottom: 1px ridge;
   min-height: 400px; }
+
+.backRed {
+  background-color: rgba(238, 211, 161, 0.2);
+  margin: 30px 20px;
+  box-shadow: 0px 1px 2px 0px #BDBDBD; }
 
 .footer {
   background-color: #CFCFCF;
