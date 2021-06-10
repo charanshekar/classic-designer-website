@@ -10,9 +10,9 @@
 
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
     <link href="css/styles.css" rel="stylesheet">
     <!-- endbuild -->
 </head>
@@ -23,10 +23,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
+            <a class="navbar-brand" href="/"><img src="img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto col-12">
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="./wardrobe.html">Wardrobe</a></li>
                         <li class="nav-item active"><a class="nav-link" href="#">Contact</a></li>
@@ -61,6 +61,21 @@
         </div>
     </header>
 
+    <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">Contact Us</li>
+            </ol>
+            <div class="col-12">
+               <h2 class="sub-headings">Location</h2>
+            </div>
+        </div>
+
+        <div class="row row-content justify-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d15551.986120538124!2d77.57683830000002!3d12.9720735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x3bae171b8445ef87%3A0x118b31ab8c2a292d!2sClassic%20Designer%2C%20%2310%2F1%2C%20Suparna%20nilaya%201st%20Floor%2C%20BVK%20Iyengar%20Rd%2C%20Bengaluru%2C%20Karnataka%20560053!3m2!1d12.972109!2d77.576773!5e0!3m2!1sen!2sin!4v1623255925299!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
     </div>
 
     <footer class="footer">
@@ -69,7 +84,7 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5 class="bold-text">Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="./aboutus.html">About</a></li>
                         <li><a href="./wardrobe.html">Wardrobe</a></li>
                         <li><a href="#">Contact</a></li>
@@ -83,8 +98,6 @@
                         Bengaluru, Karnataka-560053<br>
                         <i class="fa fa-tty"></i>: +080 22203708<br>
                         <i class="fa fa-phone"></i>: +91 98442 41109 / 83109 60936<br>
-                        <i class="fa fa-envelope"></i>:
-                        <a href="mailto:classicdesignerbangalore@gmail.com">classicdesignerbangalore@gmail.com</a>
 		           </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
@@ -106,15 +119,11 @@
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- build:js js/main.js -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. --> 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>  
     <!-- endbuild -->
 </body>
 

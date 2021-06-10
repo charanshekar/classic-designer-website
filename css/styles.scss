@@ -181,6 +181,46 @@ body{
     }
 }
 
+@media only screen and (max-width: 768px) {
+  .container{
+    padding: 0 15px;
+  }
+
+  .image-thumbnail{
+    height: 50px;
+    width: 75px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  h3{
+    font-size: 25px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  .sub-headings{
+    color: rgb(85, 85, 85);
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 10px;
+    margin: 0 0 0;
+    padding: 20px 30px;
+    text-transform: uppercase;
+  
+    text-align:center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 20px 0;
+    grid-gap: 20px;
+  }
+}
+
 @media only screen and (min-width : 768px) {
   .carousel {
     .carousel-item {
@@ -223,7 +263,8 @@ body{
  */
 
 /* Exo thin font from Google. */
-@import url(https://fonts.googleapis.com/css?family=Exo:100);
+//@import url(https://fonts.googleapis.com/css?family=Exo:100);
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
 
 /* Background data (Original source: https://subtlepatterns.com/grid-me/) */
 $bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
